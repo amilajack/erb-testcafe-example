@@ -1,6 +1,8 @@
 erb-testcafe-example
 ====================
 
+[![Build Status](https://travis-ci.org/amilajack/erb-testcafe-example.svg?branch=master&maxAge=2592)](https://travis-ci.org/amilajack/erb-testcafe-example)
+
 `testcafe` is a modern e2e solution.
 
 It is faster, less brittle, and much more modern than spectron (which uses selenium behind the scenes).
