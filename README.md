@@ -13,7 +13,12 @@ This is an experiment to get [testcafe](https://github.com/DevExpress/testcafe) 
 git clone https://github.com/amilajack/erb-testcafe-example
 cd erb-testcafe-example
 yarn
+# Build the main and renderer processes for the e2e environment
+yarn build-e2e
+# Run the e2e tests
 yarn test-e2e
+# Run e2e tests in "watch" mode
+yarn test-e2e-live
 ```
 
 ## Notable Changes

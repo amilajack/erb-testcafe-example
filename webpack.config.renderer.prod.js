@@ -28,6 +28,18 @@ export default merge.smart(baseConfig, {
     filename: 'renderer.prod.js'
   },
 
+  optimization: {
+    minimizer: process.env.E2E_BUILD
+      ? []
+      : [
+          new UglifyJSPlugin({
+            parallel: true,
+            sourceMap: true,
+            cache: true
+          })
+        ]
+  },
+
   module: {
     rules: [
       // Extract all .global.css to style.css as is
@@ -166,11 +178,6 @@ export default merge.smart(baseConfig, {
      */
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production'
-    }),
-
-    new UglifyJSPlugin({
-      parallel: true,
-      sourceMap: true
     }),
 
     new ExtractTextPlugin('style.css'),
