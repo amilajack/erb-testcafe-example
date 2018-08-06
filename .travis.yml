@@ -39,4 +39,5 @@ script:
   - yarn lint
   - yarn package
   - yarn test
+  - yarn build-e2e
   - yarn test-e2e
