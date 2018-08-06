@@ -1,4 +1,6 @@
 import { ClientFunction, Selector } from 'testcafe';
+import { ReactSelector, waitForReact } from 'testcafe-react-selectors';
+import { getPageUrl } from './helpers';
 
 const getPageTitle = ClientFunction(() => document.title);
 const counterSelector = Selector('[data-tid="counter"]');
@@ -35,6 +37,18 @@ test('should to Counter with click "to Counter" link', async t => {
     .click('[data-tid=container] > a')
     .expect(getCounterText())
     .eql('0');
+});
+
+test('should navgiate to /counter', async t => {
+  await waitForReact();
+  await t
+    .click(
+      ReactSelector('Link').withProps({
+        to: '/counter'
+      })
+    )
+    .expect(getPageUrl())
+    .contains('/counter');
 });
 
 fixture`Counter Tests`
