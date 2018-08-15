@@ -1,7 +1,7 @@
 erb-testcafe-example
 ====================
 
-[![Build Status](https://travis-ci.org/amilajack/erb-testcafe-example.svg?branch=master&maxAge=2592)](https://travis-ci.org/amilajack/erb-testcafe-example)
+[![Build Status](https://travis-ci.org/amilajack/erb-testcafe-example.svg?branch=master&maxAge=2592)](https://travis-ci.org/amilajack/erb-testcafe-example) [![Greenkeeper badge](https://badges.greenkeeper.io/amilajack/erb-testcafe-example.svg)](https://greenkeeper.io/)
 
 `testcafe` is a modern e2e solution.
 
